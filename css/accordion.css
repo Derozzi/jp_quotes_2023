@@ -1,0 +1,11 @@
+/* Set the default state of the accordion */
+.accordion .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out 0s;
+}
+
+/* Set the state of the accordion when an item is expanded */
+.accordion .accordion-item.expanded .accordion-content {
+  max-height: 1000px;
+}
