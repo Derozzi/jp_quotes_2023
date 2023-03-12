@@ -20,6 +20,7 @@ class QuoteGenerator {
     }, 1000);
   }
 
+  // Using the transition effect with opacity, first adding, then removing the "opacity: 0" property.
   fade() {
     const classArray = this.quoteDiv.classList;
     classArray.remove("hidden");
