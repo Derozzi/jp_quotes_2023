@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/accordion.css" />
     <link rel="stylesheet" href="../css/quoteAnimation.css" />
     <script src="../scripts/accordion.js" defer></script>
+    <script src="../scripts/hamburgerMenu.js" defer></script>
+    <script src="../scripts/quoteGenerator.js" defer></script>
 
     <title>Jordan Peterson Quotes</title>
   </head>
@@ -21,24 +23,27 @@
         <h1
           class="text-2xl font-main_font text-center py-2 transition-all duration-1000 sm:hover:text-5xl bg-black sm:text-4xl"
         >
-          <span class="text-gold_text">J</span
-          ><span class="text-white">ordan</span>
-          <span class="text-gold_text">P</span
-          ><span class="text-white">eterson</span><br /><span
-            class="text-gold_text"
-            >Q</span
-          ><span class="text-white">uotes</span>
+          <a href="#">
+            <span class="text-gold_text">J</span
+            ><span class="text-white">ordan</span>
+            <span class="text-gold_text">P</span
+            ><span class="text-white">eterson</span><br /><span
+              class="text-gold_text"
+              >Q</span
+            ><span class="text-white">uotes</span>
+          </a>
         </h1>
 
-        <nav class="flex items-center justify-between">
-          <div class="hidden">
-            <ul class="text-white">
+        <nav class="relative pb-5">
+          <div menuDiv class="w-0">
+            <ul unorderedList class="hidden text-white">
               <li><a href="">About J.B. Peterson</a></li>
               <li><a href="">Self Authoring Program</a></li>
             </ul>
           </div>
           <img
-            class="max-w-xs sm:hidden sm:fixed sm:right-0"
+            hamburgerMenu
+            class="max-w-xs absolute right-0 bottom-0 z-10 hover:cursor-pointer"
             src="../assets/images/SVGs/hamburger_menu.svg"
             alt="hamburger menu icon"
           />
@@ -49,7 +54,7 @@
         <section class="flex flex-col">
           <p
             quoteArea
-            class="hidden transition-all duration-500 ease-in-out text-center font-main_font text-white p-6 bg-black lg:text-4xl"
+            class="hidden transition-all duration-500 ease-in-out text-center font-main_font text-white p-6 bg-black lg:text-2xl"
           ></p>
         </section>
         <div class="flex justify-center my-6">
@@ -64,7 +69,7 @@
         <section class="my-4 accordion flex flex-col gap-y-4">
           <div class="accordion-item sm:w-3/4 sm:mx-auto">
             <h3
-              class="bg-black border-b-2 border-yellow-400 p-4 font-main_font text-white flex justify-center shadow-xl accordion-header"
+              class="bg-black border-b-2 border-yellow-400 p-4 font-main_font text-white flex justify-center shadow-xl accordion-header hover:cursor-pointer"
             >
               About J.B. Peterson
             </h3>
@@ -85,7 +90,7 @@
 
           <div class="accordion-item sm:w-3/4 sm:mx-auto">
             <h3
-              class="bg-black border-b-2 border-yellow-400 p-4 font-main_font text-white flex justify-center shadow-xl accordion-header"
+              class="bg-black border-b-2 border-yellow-400 p-4 font-main_font text-white flex justify-center shadow-xl accordion-header hover:cursor-pointer"
             >
               Self Authoring Program
             </h3>
@@ -117,7 +122,5 @@
         </p>
       </footer>
     </div>
-
-    <script src="../scripts/quoteGenerator.js" defer></script>
   </body>
 </html>
