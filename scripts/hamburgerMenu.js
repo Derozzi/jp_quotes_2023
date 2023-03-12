@@ -5,10 +5,10 @@ class HamburgerMenu {
     this.unorderedList = unorderedList;
   }
 
-  openNavBar(navBarDiv) {
-    let navClassList = this.navBarDiv.classList;
-    navClassList.toggle("w-0");
-    navClassList.toggle("w-full");
+  // Find a way to open the nav div from left to right.
+  openNavBar(navBarDiv, unorderedList) {
+    let navClassList = navBarDiv.classList;
+    let ulClassList = unorderedList.classList;
   }
 }
 
@@ -18,5 +18,5 @@ const unorderedList = document.querySelector("[unorderedList]");
 const hamburgerMenu = new HamburgerMenu(menu_button, nav_div, unorderedList);
 
 menu_button.addEventListener("click", () => {
-  hamburgerMenu.openNavBar(nav_div);
+  hamburgerMenu.openNavBar(nav_div, unorderedList);
 });
