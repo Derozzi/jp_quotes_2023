@@ -25,7 +25,7 @@ class QuoteGenerator {
     classArray.remove("hidden");
     classArray.add("opacity-0");
     setTimeout(() => {
-      classArray.replace("opacity-0", "opacity-1");
+      classArray.toggle("opacity-0");
     }, 1000);
   }
 }
